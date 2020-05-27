@@ -20,7 +20,7 @@ public class TodoItem {
             strategy = "org.hibernate.id.UUIDGenerator"
     )
     @Column(name = "todoId", updatable = false, nullable = false)
-    private UUID todoId;
+    private String todoId;
     private String title;
     private String description;
     private LocalDateTime deadline;
@@ -35,7 +35,7 @@ public class TodoItem {
     public TodoItem() {
     }
 
-    public UUID getTodoId() {
+    public String getTodoId() {
         return todoId;
     }
 

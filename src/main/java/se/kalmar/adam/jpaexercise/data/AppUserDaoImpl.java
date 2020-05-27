@@ -28,9 +28,9 @@ public class AppUserDaoImpl implements AppUserDao {
 
     @Override
     @Transactional
-    public AppUser save(AppUser appuser) {
+    public AppUser save(AppUser appuser) throws IllegalArgumentException{
         if (appuser == null) {
-            throw new IllegalArgumentException("Cant persist AppUser = " + appuser);
+            throw new IllegalArgumentException("Cant persist AppUser ");
         }
         entityManager.persist(appuser);
         return appuser;
